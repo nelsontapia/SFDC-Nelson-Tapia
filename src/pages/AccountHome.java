@@ -34,9 +34,9 @@ public class AccountHome {
         return new SetupAccount(driver);
     }
 
-    public DeleteAccount clickDeleteAccount() {
+    public PageAccount clickDeleteAccount() {
         accountLink.click();
-        return new DeleteAccount(driver);
+        return new PageAccount(driver);
     }
 
 }

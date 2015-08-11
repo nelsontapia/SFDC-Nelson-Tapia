@@ -24,6 +24,9 @@ public class OpportunitiesHome {
     @CacheLookup
     private WebElement oppLink;
 
+    @FindBy(linkText = "NewOpportunity")
+    @CacheLookup
+    private WebElement oportunityLink;
 
 
     public OpportunitiesHome(WebDriver driver){
@@ -50,5 +53,10 @@ public class OpportunitiesHome {
         } catch (WebDriverException e) {
             return false;
         }
+    }
+
+    public PageOportunity clickDeleteOportunity() {
+        oportunityLink.click();
+        return new PageOportunity(driver);
     }
 }

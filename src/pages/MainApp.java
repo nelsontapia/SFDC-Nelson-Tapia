@@ -24,11 +24,17 @@ public class MainApp {
         return new LeadHome(driver);
     }
 
+    public OpportunitiesHome goToOportunitiesHome(){
+        return new OpportunitiesHome(driver);
+    }
+
+    public AccountHome goToAccountHome(){
+        return new AccountHome(driver);
+    }
+
     public SetupLead goToSetupLead(){
         return new SetupLead(driver);
     }
-
-
 
     public CreateNewLead goToCreateNewLead(){
         return new CreateNewLead(driver);

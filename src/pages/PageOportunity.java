@@ -12,29 +12,28 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by Nelson Tapia on 8/10/2015.
  */
-public class DeleteAccount {
-
+public class PageOportunity {
     private WebDriver driver;
     private WebDriverWait wait;
     private boolean acceptNextAlert = true;
 
-    @FindBy(name = "delete")
+    @FindBy(name = "del")
     @CacheLookup
     private WebElement deleteLink;
 
 
-    public DeleteAccount(WebDriver driver){
+    public PageOportunity(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, 15);
         PageFactory.initElements(driver, this);
     }
 
-    public DeleteAccount clickDelete(){
+    public PageOportunity clickDelete(){
         deleteLink.click();
-        return new DeleteAccount(driver);
+        return new PageOportunity(driver);
     }
 
-    private boolean isAlertPresent() {
+    public boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
             return true;
@@ -43,7 +42,7 @@ public class DeleteAccount {
         }
     }
 
-    private String closeAlertAndGetItsText() {
+    public String closeAlertAndGetItsText() {
         try {
             Alert alert = driver.switchTo().alert();
             String alertText = alert.getText();
@@ -57,5 +56,4 @@ public class DeleteAccount {
             acceptNextAlert = true;
         }
     }
-
 }
