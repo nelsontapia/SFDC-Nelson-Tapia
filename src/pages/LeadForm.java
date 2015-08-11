@@ -18,7 +18,6 @@ public abstract class LeadForm {
 
     private static final String name_salutationlea2 = "name_salutationlea2";
     private static final String lead_Status = "lea13";
-    //private String name_salutationlea2_option = "Mr.";
 
     @FindBy(id = name_salutationlea2)
     @CacheLookup

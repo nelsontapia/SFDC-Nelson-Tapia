@@ -24,17 +24,8 @@ public class CampaignHome {
         PageFactory.initElements(driver, this);
     }
 
-
     public SetupCampaign clickNew(){
         newCampLink.click();
         return new SetupCampaign(driver);
     }
-
-    /*
-    public CampPage clickCampNamelink(String campName){
-        driver.findElement(By.linkText(campName)).click();
-        return new CampPage(driver);
-    }
-    */
-
 }

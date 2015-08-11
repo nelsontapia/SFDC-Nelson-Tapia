@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.*;
 
 /**
- * Created by Carlos Gonzales on 7/27/2015.
+ * Created by Nelson Tapia on 7/27/2015.
  */
 public class CreateOportunity {
 
@@ -34,19 +34,15 @@ public class CreateOportunity {
         newAccount.saveBtnClick();
 
         mainApp.goToBarMenu();
-        //return mainApp;
     }
 
     @Test
     public void testUntitled() {
 
-        //MainApp mainApp1 = new MainApp(driver);
-        //TopBarMenu topBarMenu1 = mainApp1.goToBarMenu();
-        //mainApp = new MainApp(driver);
-        //topBarMenu.clickTabOpportunities();
         OpportunitiesHome oppHomePage = topBarMenu.clickTabOpportunities();
         oppHomePage.clickNew();
 
+        // Create new Opportunity
         CreateNewOpportunity newOpp = mainApp.goToCreateNewOpportunity();
         newOpp.setOppName("NewOpportunity");
         newOpp.setCloseDate("10/08/2015");
@@ -62,7 +58,6 @@ public class CreateOportunity {
 
         mainApp.goToBarMenu();
     }
-
 
     @AfterClass
     public void tearDown() {
@@ -90,9 +85,5 @@ public class CreateOportunity {
         if(alert1){
             pageOportunity.closeAlertAndGetItsText();
         }
-
-
     }
-
-
 }

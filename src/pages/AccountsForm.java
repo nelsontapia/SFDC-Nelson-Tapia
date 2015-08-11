@@ -21,57 +21,9 @@ public class AccountsForm {
     @CacheLookup
     private WebElement accountName;
 
-    /*
-    @FindBy(id = "name_lastlea2")
-    @CacheLookup
-    private WebElement leadLastName;
-
-    @FindBy(id = "lea3")
-    @CacheLookup
-    private WebElement leadCompany;
-
-    @FindBy(id = lead_Status)
-    @CacheLookup
-    private WebElement leadStatus;
-
-
-    public AccountsForm setLeadSalutation(String salutation) {
-        wait.until(ExpectedConditions
-                .visibilityOf(leadSalutation));
-
-        Select select = new Select(driver.findElement(By.id(name_salutationlea2)));
-        select.selectByVisibleText(salutation);
-        return this;
-    }
-    */
-
     public AccountsForm setAccountName(String newAccountName){
         accountName.clear();
         accountName.sendKeys(newAccountName);
         return this;
     }
-    /*
-
-    public AccountsForm setSecondNameLead(String newSecondName){
-        leadLastName.clear();
-        leadLastName.sendKeys(newSecondName);
-        return this;
-    }
-
-    public AccountsForm setLeadCompany(String company){
-        leadCompany.clear();
-        leadCompany.sendKeys(company);
-        return this;
-    }
-
-    public AccountsForm setLeadStatus(String sLeadStatus) {
-        wait.until(ExpectedConditions
-                .visibilityOf(leadStatus));
-
-        Select select = new Select(driver.findElement(By.id(lead_Status)));
-        select.selectByVisibleText(sLeadStatus);
-        return this;
-    }
-    */
-
 }
